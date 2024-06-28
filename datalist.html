@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>登録中の住所 - ゴミ出しリマインド</title>
+    <meta name="description" content="毎週のゴミ出しを前日に通知で教えます。" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header-logo">
+        <a href="" class="header-logo_link">ゴミ出しリマインド</a>
+      </h1>
+
+      <div id="flexbox">
+        <nav class="header-nav container">
+          <ul class="header-nav_list">
+            <div class="box-item">
+              <li class="header-nav_item">
+                <a href="index.html" class="header-nav_link"><i class="fa fa-home icon"></i>
+                  <p>ホーム</p>
+                </a>
+              </li>
+            </div>
+            <div class="box-item">
+              <li class="header-nav_item">
+                <a href="datalist.html" class="header-nav_link"><i class="fa fa-search icon"></i>
+                  <p>検索</p>
+                </a>
+              </li>
+            </div>
+          </ul>
+          
+        </nav>
+      </div>
+    </header>
+    <main class="datalist_main">
+      <p class="output_head">登録中の住所</p>
+      <div class="output_body">
+        <div class="output_week">
+          <p>住所</p>
+          <p id="msg"></p>
+          <p>家庭ごみ</p>
+          <p id="gar_1"></p>
+          <p id="gar_2"></p>
+        </div>
+        <div class="output_delete">
+          <button type="button" id="btn">
+            <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+            <p class="output_delete_point">削除</p>
+          </button>
+        </div>
+      </div>
+      <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+      <script type="module" src="js/database.js"></script>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-copyright">
+        <small class="footer-copyright_txt">&copy; 2024.</small>
+      </p>
+    </footer>
+  </body>
+</html>
