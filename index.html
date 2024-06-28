@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>HOME - ゴミ出しリマインド</title>
+  <meta name="description" content="毎週のゴミ出しを前日に通知で教えます。" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header-logo">
+      <a href="" class="header-logo_link">ゴミ出しリマインド</a>
+    </h1>
+
+    <div id="flexbox">
+      <nav class="header-nav container">
+        <ul class="header-nav_list">
+          <div class="box-item">
+            <li class="header-nav_item">
+              <a href="index.html" class="header-nav_link"><i class="fa fa-home icon"></i>
+                <p>ホーム</p>
+              </a>
+            </li>
+          </div>
+          <div class="box-item">
+            <li class="header-nav_item">
+              <a href="datalist.html" class="header-nav_link"><i class="fa fa-search icon"></i>
+                <p>検索</p>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="top_main">
+    <h2 class="explanation">説明</h2>
+    <p class="explanation_text">
+      お住まいのご住所を入力すると，家庭ごみの回収日を知らせるを送信するサイトです．
+      <br/>新たに一人暮らしを始める方など，ゴミ出しを忘れてしまう方は是非ご利用ください！
+      <br/>
+      <br/>通知は家庭ごみ回収日前日の21:00~22:00にかけて，
+      <br/>当サイトにアクセスしていただいた方に送信しております．
+    </p>
+
+    <p class="explanation_text2">
+      【利用上のご注意】
+      <br />・現在の対応地域は下記の通りとなっております．
+      <br />【仙台市青葉区】一番町・五橋・米ケ袋
+      <br />【仙台市若林区】荒町・五橋
+      <br />
+      <br />・ご利用のブラウザから通知の表示を許可してください．
+    </p>
+    <h2 class="search">登録</h2>
+
+    <div class="m_searcher container">
+      <p class="m_searcher_p">都道府県</p>
+
+      <form class="form form-translate">
+        <select class="pulldown" name="pref" id="nameText">
+          <option value="null"></option>
+          <option value="宮城県">宮城県</option>
+        </select>
+        <div id="form-arrow" class="form-arrow"></div>
+      </form>
+      <p class="m_searcher_p">市区町村</p>
+
+      <form class="form form-translate2">
+        <select class="pulldown" name="pref" id="nameText2">
+          <option value="null"></option>
+          <option value="仙台市青葉区">仙台市青葉区</option>
+          <option value="仙台市若林区">仙台市若林区</option>
+        </select>
+        <div id="form-arrow2" class="form-arrow"></div>
+      </form>
+
+      <p class="m_searcher_p">地区</p>
+      <form class="form form-translate3">
+        <select class="pulldown" name="pref" id="nameText3">
+          <option value="nullnull"></option>
+          <option value="五橋三丁目">五橋三丁目</option>
+          <option value="五橋(それ以外)">五橋(それ以外)</option>
+          <option value="一番町">一番町</option>
+          <option value="荒町">荒町</option>
+          <option value="米ケ袋">米ケ袋</option>
+        </select>
+        <div id="form-arrow3" class="form-arrow"></div>
+      </form>
+
+      <div id="id" class="id_test">
+        <input class="submit" type="submit" value="登録" id="checkButton" />
+      </div>
+      <p id="msg"></p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-copyright">
+      <small class="footer-copyright_txt">&copy; 2024.</small>
+    </p>
+  </footer>
+</body>
+</html>
